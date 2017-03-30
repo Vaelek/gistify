@@ -127,11 +127,11 @@ namespace CodeConnect.Gistify.Engine
 
         private static string buildGist(string usingStatements, string declarations, string snippetCode)
         {
-            string spacer = 
-                String.IsNullOrEmpty(usingStatements) && String.IsNullOrEmpty(declarations) 
+            string spacer =
+                String.IsNullOrEmpty(usingStatements) && String.IsNullOrEmpty(declarations)
                 ? String.Empty
                 : SPACER;
-            return String.Concat(usingStatements, declarations, spacer, snippetCode);
+            return String.Concat("// Auto Generated Definitions" + Environment.NewLine, usingStatements, declarations, spacer, "// Begin Copied Code" + Environment.NewLine, snippetCode);
         }
     }
 }

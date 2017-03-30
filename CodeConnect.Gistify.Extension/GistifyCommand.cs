@@ -125,7 +125,7 @@ namespace CodeConnect.Gistify.Extension
                     return;
                 }
                 var augmentedSnippet = CodeAnalyzer.AugmentSelection(document, startPosition, endPosition);
-                handleAugmentedSnippet(augmentedSnippet);
+                handleAugmentedSnippet(augmentedSnippet, System.IO.Path.GetFileName(filePath));
             }
             else
             {
@@ -133,7 +133,7 @@ namespace CodeConnect.Gistify.Extension
             }
         }
 
-        private void handleAugmentedSnippet(string augmentedSnippet)
+        private void handleAugmentedSnippet(string augmentedSnippet, string fileName)
         {
             switch (Options.SavedOptions.Instance.DefaultActionValue)
             {
@@ -141,7 +141,7 @@ namespace CodeConnect.Gistify.Extension
                     ClipboardIntegration.HandleAugmentedSnippet(augmentedSnippet);
                     break;
                 case Options.SavedOptions.DefaultAction.UploadAsGist:
-                    GitHubIntegration.HandleAugmentedSnippet(augmentedSnippet);
+                    GitHubIntegration.HandleAugmentedSnippet(augmentedSnippet, fileName);
                     break;
             }
         }

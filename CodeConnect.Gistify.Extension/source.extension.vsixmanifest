@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="ca2edc3f-f1ca-4f62-8ae2-f1f87004a6a2" Version="1.0" Language="en-US" Publisher="Code Connect" />
-    <DisplayName>Gistify</DisplayName>
-    <Description xml:space="preserve">Extends snippet of code with information needed to understand it out of context.</Description>
-    <MoreInfo>https://github.com/CodeConnect/gistify</MoreInfo>
+    <Identity Id="DCC96F09-DA5B-4F4D-AF57-2C52E47AE0E3" Version="1.1" Language="en-US" Publisher="Vaelek" />
+    <DisplayName>Gistify VS2017</DisplayName>
+    <Description xml:space="preserve">Extends snippet of code with information needed to understand it out of context. Compatible with both VS2015 and VS2017. Added minor enhancements. Original by Code Connect, modifications by Vaelek</Description>
+    <MoreInfo>https://github.com/Vaelek/gistify</MoreInfo>
     <License>Resources/license.txt</License>
     <GettingStartedGuide>https://github.com/CodeConnect/gistify/wiki</GettingStartedGuide>
     <Icon>Resources/GistifyIcon.ico</Icon>
@@ -12,7 +12,7 @@
     <Tags>copy, gist, github, upload, roslyn, using, snippet</Tags>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0]" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6,)" />
@@ -21,4 +21,7 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
   </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
 </PackageManifest>
