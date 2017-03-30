@@ -1,3 +1,8 @@
+# Modifications
+
+This is a modified fork of Gistify by Code Connect. This version is compatible with VS2015 and VS2017.
+Rather than every gist being named "fragment.cs", it will now be named "Snip-" followed by the original file name.
+
 # gistify
 A Roslyn experiment.
 
@@ -6,8 +11,6 @@ A hassle free tool that intelligently touches-up and uploads your code snippets.
 Selected snippet of code is enhanced with information about the types and origin of objects used within.
 
 The enhanced snippet is either copied to the clipboard or uploaded to GitHub. Feel free to contribute and add more integrations!
-
-**[Download from VS Gallery](https://visualstudiogallery.msdn.microsoft.com/7e4ca24a-f061-430d-9b0b-4fd01b2a5781)** and read the **[Getting Started guide](https://github.com/CodeConnect/gistify/wiki)**
 
 ### Example
 
@@ -21,7 +24,7 @@ Output:
 
 ### Contribute
 
-Gistify is using some elements of the Roslyn compiler, namely the `SemanticModel` and `CSharpSyntaxWalker` in class [CodeConnect.Gistify.Engine.DiscoveryWalker](https://github.com/CodeConnect/gistify/blob/master/CodeConnect.Gistify.Engine/DiscoveryWalker.cs). 
+Gistify is using some elements of the Roslyn compiler, namely the `SemanticModel` and `CSharpSyntaxWalker` in class [CodeConnect.Gistify.Engine.DiscoveryWalker](https://github.com/Vaelek/gistify/blob/master/CodeConnect.Gistify.Engine/DiscoveryWalker.cs). 
 
 To get started with Roslyn, see the [Learn Roslyn Now](https://joshvarty.wordpress.com/learn-roslyn-now/) tutorial series.
 
